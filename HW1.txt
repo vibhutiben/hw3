@@ -1,0 +1,100 @@
+Browser  - Google chrome
+Version  - 72.0.3626.121
+OS       - Windows 10
+URL      - Bmail.com
+Valid data
+Username - jacksmith
+Password - Test1234
+
+Invalid data
+Username - jackbasic
+Password - abc123
+
+
+Features:bmail login
+
+Scenario:User should be logged in with valid credential
+Given user on bmail login page
+When enter the username"jacksmith"
+And enter the password"Test1234"
+And user click on sign in button 
+Then user should be logged in successfully
+
+
+Scenario:User should not be logged in with invalid credential
+Given user on bmail login home page
+When enter the username"jackbasic"
+And enter the password"abc123"
+And user click on sign in button 
+Then user should not be logged in successfully 
+And error message should display
+
+
+Scenario:User should not be logged in with valid username and invalid password
+Given user on bmail login home page
+When enter the username"jacksmith"
+And enter the password"abc123"
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+Scenario:User should not be logged in with invalid username and valid password
+Given user on bmail login home page
+When enter the username"jackbasic"
+And enter the password"Test1234"
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+Scenario:User should not be logged in with valid username and blank password
+Given user on bmail login home page
+When enter the username"jacksmith"
+And leave the password field blank
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+Scenario:User should not be logged in with blank username and valid password
+Given user on bmail login home page
+When leave the username field blank
+And enter the password"Test1234"
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+Scenario:User should not be logged in with invalid username and blank password
+Given user on bmail login home page
+When enter the username"jackbasic"
+And leave the passowrd field blank
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+Scenario:User should not be logged in with blank username and invalid password
+Given user on bmail login home page
+When leave the username field blank
+And enter the password"abc123"
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+Scenario:User should not be logged in with blank username and blank password
+Given user on bmail login home page
+When leave the username field blank
+And leave the password field blank
+And user click on sign in button 
+Then user should not be logged in successfully
+And error message should display
+
+
+
+
+
+
+
